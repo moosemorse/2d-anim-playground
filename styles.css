@@ -1,0 +1,51 @@
+img {
+  transform: rotate(0deg);
+  animation: rotation 5s infinite linear
+}
+
+@keyframes rotation {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+.container {
+  position: relative;
+  top: 50px;
+  left: 50px;
+}
+
+.layer-1 {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.layer-2 {
+  position: absolute;
+  top: 15px;
+  left: 0px;
+}
+
+.layer-3 {
+  position: absolute;
+  top: 30px;
+  left: 0px;
+}
+
+.layer-4 {
+  position: absolute;
+  top: 45px;
+  left: 0px;
+}
+
+.layer-5 {
+  position: absolute;
+  top: 60px;
+  left: 0px;
+}
+
+.layer-6 {
+  position: absolute;
+  top: 75px;
+  left: 0px;
+}
