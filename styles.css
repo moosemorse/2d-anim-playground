@@ -1,51 +1,37 @@
-img {
-  transform: rotate(0deg);
-  animation: rotation 5s infinite linear
+body {
+  margin: 5vh;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ec8a8a;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 100px;
+  padding: 0;
+  width: 100%;
+  max-width: 50vh;
+}
+
+.block {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.layer {
+  position: absolute;
+  top: calc((var(--i) - 1) * -10px);
+  width: 150px;
+  height: 150px;
+  animation: rotation 5s linear infinite;
+  transform-origin: center;
 }
 
 @keyframes rotation {
-  0% {transform: rotate(0deg);}
-  100% {transform: rotate(360deg);}
-}
-
-.container {
-  position: relative;
-  top: 50px;
-  left: 50px;
-}
-
-.layer-1 {
-  position: relative;
-  top: 0;
-  left: 0;
-}
-
-.layer-2 {
-  position: absolute;
-  top: 15px;
-  left: 0px;
-}
-
-.layer-3 {
-  position: absolute;
-  top: 30px;
-  left: 0px;
-}
-
-.layer-4 {
-  position: absolute;
-  top: 45px;
-  left: 0px;
-}
-
-.layer-5 {
-  position: absolute;
-  top: 60px;
-  left: 0px;
-}
-
-.layer-6 {
-  position: absolute;
-  top: 75px;
-  left: 0px;
+  from { transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
 }
