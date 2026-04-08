@@ -22,6 +22,10 @@ body {
   height: 200px;
 }
 
+.block:hover .layer {
+  animation-play-state: paused;
+}
+
 .layer {
   position: absolute;
   top: calc((var(--i) - 1) * -10px);
